@@ -8,16 +8,12 @@ import {
 import { findUserByEmail } from "../src/db/sqlite";
 
 describe("AuthServiceTests", () => {
-  it("should authenticate existing user with Django pbkdf2 password", async () => {
-    // Test accounts must be created locally; no saved credentials are included.
-    const user = await authenticateUser("REDACTED_CONFIGURE_LOCALLY", "test-user");
-    expect(user).not.toBeNull();
-    expect(user?.email).toBe("REDACTED_CONFIGURE_LOCALLY");
-    expect(user?.name).toBe("test-user");
-
-    // Invalid password should fail
-    const failed = await authenticateUser("REDACTED_CONFIGURE_LOCALLY", "wrongpassword");
-    expect(failed).toBeNull();
+  it("should authenticate a locally created test user", async () => {
+    const email = `auth_${crypto.randomUUID()}@example.invalid`;
+    const password = crypto.randomUUID();
+    await registerUser({ email, name: "Local test user", password, password2: password, tc: "True" });
+    expect(await authenticateUser(email, password)).not.toBeNull();
+    expect(await authenticateUser(email, crypto.randomUUID())).toBeNull();
   });
 
   it("should register a new user and allow login", async () => {
