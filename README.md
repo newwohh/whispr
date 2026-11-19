@@ -1,56 +1,18 @@
-# Whispr Chat - Frontend
+# Whispr
 
-[Whispr Chat](https://whispr-six.vercel.app/)
+One repository containing all parts of this project.
 
-Welcome to Whispr Chat - a modern and intuitive chat application built using React.js, Framer Motion, and Material-UI.
+| Directory | Original repository |
+| --- | --- |
+| [frontend/](./frontend/) | `newwohh/whispr-chat-frontend` |
+| [backend/](./backend/) | `newwohh/whispr-chat-backend` |
 
-## Description
+## Development
 
-Whispr Chat is a real-time messaging platform that allows users to connect, chat, and share with friends and family effortlessly. With a user-friendly interface and smooth animations powered by Framer Motion, the application provides a delightful chatting experience. The sleek design, developed using Material-UI, ensures a visually appealing and responsive layout across various devices.
+Each component retains its original files and dependencies. Run its existing setup and development commands from that component directory. See its README and package files. Services remain independently configured. Deployment root directories must point to the relevant component.
 
-## Features
+## Preserved history
 
-- Real-time messaging with friends and groups.
-- Seamless chat experience with smooth animations.
-- User-friendly interface for easy navigation.
-- Responsive design for optimal performance on any device.
+Imported on 2026-11-19. Component directories exactly match the original default-branch trees. The consolidation commit retains both original default-branch heads as parents, preserving commit IDs and authors. Historical commits use their original paths. All original branches and tags are retained under `imports/<original-repository>/...`; pull request refs are retained there under `pull/`.
 
-## Installation
-
-To run Whispr Chat locally, follow these steps:
-
-1. Clone the repository:
-   ```
-   git clone https://github.com/newwohh/whispr-chat-frontend.git
-   ```
-2. Change to the project directory:
-   ```
-   cd src
-   ```
-3. Install the dependencies:
-   ```
-   npm install
-   ```
-4. Start the development server:
-   ```
-   npm start
-   ```
-
-## Usage
-
-1. Sign up or log in to your Whispr Chat account.
-3. Start chatting and sharing messages instantly.
-
-## Contributing
-
-We welcome contributions from the community! To contribute to Whispr Chat - Frontend, follow these steps:
-
-1. Fork the repository on GitHub.
-2. Create a new branch from the main branch.
-3. Make your desired changes and improvements.
-4. Commit and push your changes to your forked repository.
-5. Create a pull request to merge your changes into the main repository.
-
-## Credits
-
-Whispr Chat is created and maintained by [Nevin Raju](https://github.com/newwohh).
+Repository settings, deployment connections, and secrets are not copied automatically.
